@@ -38,16 +38,6 @@ jobs:
 
 workflows:
   version: 2
-  test:
-    jobs:
-      - build-and-test
   nightly:
     jobs:
       - nightly-wagtail-test
-    triggers:
-      - schedule:
-          cron: "0 0 * * *"
-          filters:
-            branches:
-              only:
-                - main
